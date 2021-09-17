@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'freight-display-pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('freight-display-pro'),
+    url('https://use.typekit.net/af/f15774/0000000000000000000132cf/27/l?fvd=n4&primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3') format('woff');
+}
+
+@font-face {
+  font-family: 'FF Bau Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FF Bau Regular'),
+    url('https://cdn.shopify.com/s/files/1/0044/1237/5107/t/1/assets/3A0D89_1_0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FF Bau Regular';
+  font-style: normal;
+  font-weight: bold;
+  src: local('FF Bau Regular'),
+    url('https://cdn.shopify.com/s/files/1/0044/1237/5107/t/1/assets/3A0D89_0_0.woff2') format('woff2');
+}
+
+
+body {
+  font-family: 'FF Bau Regular', san-serif !important;
+  font-weight: 300 !important;
+}
+
+.freight {
+  font-family: 'freight-display-pro';
+}
+
+.ant-layout-header.lumin-header {
+  background: #fff;
+  box-shadow: 0 2px 3px -3px grey;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 0 2.5rem;
+
+  .logo {
+    float: left;
+    height: 44px;
+    margin-top: .5rem;
+    margin-right: 4rem;
+  }
+
+  .ant-menu {
+    border: 0px !important;
+
+    .ant-menu-horizontal {
+      border: 0px !important;
+    }
+
+    .ant-menu-item.lumin-menu-item {
+      margin-right: 1rem;
+
+      &::after {
+        border-bottom: 0px !important;
+      }
+    }
+
+    &.no-padding {
+      .ant-menu-item.lumin-menu-item {
+        padding: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      select {
+        line-height: normal;
+      }
+    }
+  }
+
+  .cart-logo {
+    height: 21px;
+    // float: right;
+  }
+}
+
+.site-layout {
+  *padding: 0 50px;
+  margin-top: 64px;
+  min-height: calc(100vh - 130px) !important;
+  background-color: #f5f5f4;
+
+  .css-1qsgf6d {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5.5rem;
+    padding-bottom: 4rem;
+
+    h1 {
+      font-family: 'freight-display-pro';
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 1em;
+    }
+
+    .select {
+      max-width: 424px;
+      width: 100%;
+    }
+  }
+
+  #Products {
+    background: #e2e6e3;
+
+    .inner {
+      max-width: 1220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product {
+
+      img,
+      .img {
+        max-width: 100%;
+        height: auto;
+        max-height: 100px;
+        object-fit: contain;
+        flex: 1 1 0%;
+      }
+
+      .title {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+
+      .ant-btns {
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+
+.ant-drawer {
+  .ant-drawer-content {
+    background-color: #f2f2ef;
+
+    h5 {
+      color: #696969;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-style: normal;
+      font-size: 10px;
+      text-align: center;
+      margin-bottom: 0;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .item {
+      color: #1e2d2b;
+      background-color: #fff;
+
+      .description {
+        width: 65%;
+        margin-right: 2rem;
+      }
+
+      small {
+        font-size: 10px;
+      }
+
+      h6 {
+        color: #1e2d2b;
+        margin-bottom: 0;
+        font-size: 13px;
+        letter-spacing: .03px;
+        padding: 0;
+        text-rendering: optimizeLegibility;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      .quantity-selector {
+        border: .5px solid #bcbcbc;
+        padding: 7px;
+        width: 76px;
+
+        .counter-action {
+          cursor: pointer;
+          color: #000;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.skeleton {
+  height: 200px;
+  // height: 1em;
+  position: relative;
+  overflow: hidden;
+  background-color: #e9e7e9;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg,
+        rgba(#b4b1b1, 0) 0,
+        rgba(#b4b1b1, 0.2) 20%,
+        rgba(#b4b1b1, 0.5) 60%,
+        rgba(#b4b1b1, 0));
+    animation: shimmer 2s infinite;
+    content: '';
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+}
